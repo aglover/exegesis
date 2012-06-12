@@ -27,14 +27,12 @@ app.post '/', (req, res) ->
 	word = new Word( { spelling : req.body.spelling})
 	
 	synonyms = req.body.synonyms?.split(',') || []
-	console.log "synonyms is #{synonyms}"
 	for synon in synonyms
 		word.synonyms.push synon
 	
 	for value in req.body.definitions
 		word.definitions.push { definition : value['definition'], part_of_speech: value['part_of_speech'] }
 
-	# console.log "word 3is #{word}"
 	word.save (err, data) ->
 		if err
 			console.log "error is #{err}"

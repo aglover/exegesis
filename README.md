@@ -6,7 +6,7 @@ The source code is [CoffeeScript](http://coffeescript.org/).
 ## Installation
 
 Make sure you are on a current version of Node and have CoffeeScript installed. First grab all the required dependencies via `npm install` and then 
-type `coffee src/App.coffee`. 
+type `coffee app/App.coffee`. 
 
 ## Running the tests
 

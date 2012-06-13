@@ -14,6 +14,7 @@ This project uses [Mocha](http://visionmedia.github.com/mocha/) and [should](htt
 
 ## Helpful resources
 
+* [CoffeeScript Style Guide](https://github.com/polarmobile/coffeescript-style-guide)
 * [mongoose](http://mongoosejs.com/)
 * [Node.js Module – exports vs module.exports](http://www.hacksparrow.com/node-js-exports-vs-module-exports.html)
 * [Nodejs Modules and Export Explained](http://itsallabtamil.blogspot.com/2012/01/nodejs-modules-and-export-explained.html)
@@ -29,6 +30,7 @@ This project uses [Mocha](http://visionmedia.github.com/mocha/) and [should](htt
 * [mongoose-types](https://github.com/bnoguchi/mongoose-types)
 * [eco template engine](https://github.com/sstephenson/eco)
 * [whiskers.js template engine](https://github.com/gsf/whiskers.js)
+* [CoffeeLint](http://www.coffeelint.org/)
 
 
 # License

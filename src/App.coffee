@@ -6,6 +6,7 @@ mongoose.connect "mongodb://#{process.env.MONGO_USER}:#{process.env.MONGO_PASSWO
 models = require './models/Models'
 Definition = models.Definition
 Word = models.Word
+
 # Definition = require './models/Definition'
 # Word = require './models/Word'
 

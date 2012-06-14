@@ -1,7 +1,10 @@
 # CoffeeScript - Mongoose - MongoDB dictionary app
 
 This project is a Node web app (using [Express](http://expressjs.com/)) that leverages [MongoDB](http://www.mongodb.org/) for a datastore. 
-The source code is [CoffeeScript](http://coffeescript.org/). 
+The source code is [CoffeeScript](http://coffeescript.org/). ORM is facilitated by [Mongoose](http://mongoosejs.com/), which is a Mongoid-like 
+framework (if you are coming from the Ruby community) in that it allows you to create model objects that represent documents. The API is fairly
+straightforward; if you're familiar with native Mongo query semantics then you'll pick up Mongoose quickly. For more information and examples of 
+Mongoose, check out the tests in the `test` directory of this project. 
 
 ## Installation
 

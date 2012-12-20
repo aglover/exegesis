@@ -15,13 +15,14 @@ describe 'models', ->
 			word = new models.Word({spelling : 'nefarious'})
 			word.synonyms.push 'evil'
 			word.synonyms.push 'menacing'
-			word.definitions.push { definition : 'extremely wicked or villainous; iniquitous.', part_of_speech: 'adjective' }
+			word.definitions.push { definition : 'extremely wicked or villainous; iniquitous.', part_of_speech: 'adjective', example_sentence: 'he is an extremmely nefarious man' }
 			word.save (err, data) ->
 				models.Word.findById word._id, (err, document) ->
 					document.spelling.should.eql 'nefarious'
 					document.definitions.length.should.eql 1
 					document.synonyms.length.should.eql 2
 					document.definitions[0]['part_of_speech'].should.eql 'adjective'
+					document.definitions[0]['example_sentence'].should.eql 'he is an extremmely nefarious man'
 					models.Word.remove _id: word._id, (err, data) ->
 						done(err)
 
@@ -30,7 +31,7 @@ describe 'models', ->
 			word = new models.Word({spelling : 'nefarious'})
 			word.synonyms.push 'evil'
 			word.synonyms.push 'menacing'
-			word.definitions.push {definition : 'extremely wicked or villainous; iniquitous.', part_of_speech: 'adjective' }
+			word.definitions.push {definition : 'extremely wicked or villainous; iniquitous.', part_of_speech: 'adjective', example_sentence: 'he is an extremmely nefarious man' }
 			word.save (err, data) ->
 				
 		it 'findOne should return one', (done) ->
@@ -47,6 +48,7 @@ describe 'models', ->
 				documents[0].definitions.length.should.eql 1
 				documents[0].synonyms.length.should.eql 2
 				documents[0].definitions[0]['part_of_speech'].should.eql 'adjective'
+				documents[0].definitions[0]['example_sentence'].should.eql 'he is an extremmely nefarious man'
 				done(err)
 				
 		it 'finding by definition should return the entire word doc', (done) ->
@@ -55,6 +57,7 @@ describe 'models', ->
 				documents[0].definitions.length.should.eql 1
 				documents[0].synonyms.length.should.eql 2
 				documents[0].definitions[0]['part_of_speech'].should.eql 'adjective'
+				documents[0].definitions[0]['example_sentence'].should.eql 'he is an extremmely nefarious man'
 				done(err)
 		
 		after ->

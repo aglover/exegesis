@@ -11,9 +11,18 @@ Mongoose, check out the tests in the `test` directory of this project.
 Make sure you are on a current version of Node and have CoffeeScript installed. First grab all the required dependencies via `npm install` and then 
 type `coffee app/App.coffee`. 
 
+Note, to connect to a valid instance of Mongo, you'll need a username and password; what's more, you'll need to export them so that the process can read them at runtime like so:
+
+```
+$>export MONGO_USER=...
+$>export MONGO_PASSWORD=...
+```
+
 ## Running the tests
 
 This project uses [Mocha](http://visionmedia.github.com/mocha/) and [should](https://github.com/visionmedia/should.js) -- to run these tests, type `cake test`.
+
+Note, the tests assume you have Mongo running locally.
 
 ## Helpful resources
 

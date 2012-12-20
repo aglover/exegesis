@@ -1,0 +1,35 @@
+!!! 5
+html(lang='en')
+  include includes/header
+  body
+    include includes/navigation
+    .container
+      .hero-unit
+        form.form-horizontal(action='/new_word', method='post')
+          fieldset
+            legend Add a word
+            .control-group
+              label.control-label(for='spelling') Spelling
+              .controls
+                input(type='text', placeholder='some word', id='spelling')
+            .control-group
+              label.control-label(for='part_of_speech') Part of speech
+              .controls
+                select(id='part_of_speech')
+                  option adjective
+                  option noun
+                  option verb
+                  option adverb
+            .control-group
+              label.control-label(for='definition_1') Definition
+              .controls           
+                input(type='text', placeholder='some def', id='definition_1')
+            .control-group
+              label.control-label(for='ex_sentence_1') Example sentence
+              .controls           
+                input(type='text', placeholder='some example sentence', id='ex_sentence_1') 
+            .control-group
+              .controls               
+                button.btn(type="submit") Create it!
+      hr
+      include includes/footer

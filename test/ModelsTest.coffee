@@ -7,6 +7,9 @@ describe 'models', ->
 	beforeEach ->
 		mongoose.connect 'mongodb://localhost/words_test'
 		
+	afterEach ->
+		mongoose.connection.close()
+		
 	describe 'creating words', ->
 		before ->
 			models.Word.remove spelling:'nefarious', (err, data) ->

@@ -3,7 +3,7 @@ models = require '../models/Models'
 
 module.exports = 
 	# '/'
-	index: (req, res) ->
+	post: (req, res) ->
 		word = new models.Word({spelling : req.body.spelling})
 
 		synonyms = req.body.synonyms?.split(',') or []
@@ -19,3 +19,6 @@ module.exports =
 				res.send 'error!'
 			else
 				res.send 'success'
+				
+	get: (req, res) ->
+		res.render 'index'

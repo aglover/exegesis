@@ -1,0 +1,38 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand(href='/') Savvy Words
+      .nav-collapse.collapse
+        ul.nav
+          //- li
+            //- a(href='#about') About
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown')
+              | Resources
+              b.caret
+            ul.dropdown-menu
+              li.nav-header Environments
+              li
+                a(href='https://cirrus.app47.com', target='_blank') cirrus
+              li
+                a(href='https://roxanne.heroku.com', target='_blank') roxanne
+              li.divider  
+              //- li.nav-header App47 sites
+              li
+                a(href='http://app47.com/wiki', target='_blank') App47 wiki
+              li
+                a(href='http://app47.com/', target='_blank') App47.com
+              li.divider
+              //- li.nav-header External resources
+              li
+                a(href='http://mongohq.com', target='_blank') MongoHQ
+              li
+                a(href='https://www.pivotaltracker.com', target='_blank') Pivotal
+              li
+                a(href='http://basecamp.com/', target='_blank') Basecamp
+              li
+                a(href='http://aws.amazon.com/', target='_blank') AWS  

@@ -22,3 +22,13 @@ module.exports =
 				
 	get: (req, res) ->
 		res.render 'index'
+		
+	new_word: (req, res) ->
+		console.log(JSON.stringify(req.body))
+		word = new models.Word({spelling : req.body.spelling.toLowerCase()})
+		word.definitions.push {definition: req.body.definition_1, part_of_speech: req.body.part_of_speech, example_sentence: req.body.ex_sentence_1}
+		word.save (err, data) ->
+			if err
+				console.log "error is #{err}"
+			else
+				res.render 'index'

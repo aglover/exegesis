@@ -20,7 +20,7 @@ $>export MONGO_PASSWORD=...
 
 ## Running the tests
 
-This project uses [Mocha](http://visionmedia.github.com/mocha/) and [should](https://github.com/visionmedia/should.js) -- to run these tests, type `cake test`.
+This project uses [Mocha](http://mochajs.org/) and [should](https://github.com/visionmedia/should.js) -- to run these tests, type `cake test`.
 
 Note, the tests assume you have Mongo running locally.
 
